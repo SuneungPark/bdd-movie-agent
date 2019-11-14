@@ -1,0 +1,10 @@
+train (t-9114i4fkix0mzxa1xo4hcqcwv) {
+  utterance ("[g:MovieGenre:prompt] (스릴러)[v:MovieGenre:Thriller]")
+  plan (Y2BikE2tSMwtyEnVy80vy0x1TE/NK9HzBTHdU/OKUglJMwIhAwMPEDMBMZANAA==)
+  last-modified (1572596248742)
+}
+train (t-9yl5777nn99xemlk67dtyv50s) {
+  utterance ([g:MovieGenre:prompt,r:RunQuiz] 선택 도와줘)
+  plan (Y2BmkE2tSMwtyEnVy80vy0x1TE/NK9HzBTHdU/OKUhmksEgHleYFlmZWMYhjkQNLMDEwAjEDkGRkAAEImwEA)
+  last-modified (1572596133591)
+}

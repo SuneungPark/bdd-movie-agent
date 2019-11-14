@@ -1,0 +1,5 @@
+train (t-jjjk07mv9fcjvd8tbtnekz1g4) {
+  utterance ("[g:Movie] (2019년도)[v:time.DateTimeExpression]에 (송강호)[v:PersonName]가 출연한 영화 찾아줘")
+  plan (Y2BjkCguzUstzUvXy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkJbHIBqQWFefnMcji0IhHGiLll5ibyiBdllmmV5KZm6rnkliSGgJkuFYUFKUWF2cC9bIyMDIwMTAzsABZDFA2IxAygDEIMAMxWBYA)
+  last-modified (1573621290320)
+}

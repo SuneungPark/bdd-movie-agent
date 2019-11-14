@@ -1,0 +1,10 @@
+train (t-cf2v2nku4o9g9zn7dmbx5cama) {
+  utterance ("[g:Answer:prompt] (단어)[v:Answer]")
+  plan (Y2BikCjLLNNLzAxJLS5xTiwoLs1J1XPMKy5PLcIjwwiEDAw8QMwExEA2AA==)
+  last-modified (1572518361765)
+}
+train (t-cwut7sihuhbmkhi1eowzi6gg1) {
+  utterance ([g:Movie,r:RunQuiz] 영화 퀴즈 시작)
+  plan (Y2BlkCguzUstzUvXy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkZXHpc0/NK0plkMIiHVSaF1iaWcUgjkUOLMHCwMjAxMAMpBmgLEYwCwSYgJiZgQEA)
+  last-modified (1572993419866)
+}

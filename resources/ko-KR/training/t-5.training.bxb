@@ -1,0 +1,15 @@
+train (t-5k23hp07duueso8k9z248s2zw) {
+  utterance ([g:Movie] 볼 만한 영화 추천해줘)
+  plan (Y2BkkEitSMwtyEnVy80vy0x1TE/NK9HzBTEZQIARRAAA)
+  last-modified (1571738818631)
+}
+train (t-5wo0hayx02me15h50w4rd7uar) {
+  utterance ("[g:Movie] (1999)[v:time.DateTimeExpression]년도에 나온 (공상 과학)[v:MovieGenre:ScienceFiction] 영화 보여줘")
+  plan (Y2BhkEitSMwtyEnVy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkZXHpc0/NK0plkC7LLNMrycxN1XNJLEkNATJcKwqKUouLM/PzGJgZGBmYgCQDkAZBCADxwaIA)
+  last-modified (1571737519086)
+}
+train (t-5xsa5qv474u8ask1exgsliub0) {
+  utterance ("[g:Movie] (판타지)[v:MovieGenre:Fantasy] 영화 검색해줘")
+  plan (Y2BmkEitSMwtyEnVy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkZXHpc0/NK0plYGJgBGIGIMnIAAJMEAwA)
+  last-modified (1571728345747)
+}

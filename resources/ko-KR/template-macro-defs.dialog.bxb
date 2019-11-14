@@ -1,0 +1,420 @@
+template-macro-def (GENRES) {
+  content {
+    template ("장르")
+  }
+}
+
+template-macro-def (MOVIE_FROM_FINDMOVIE_CONCEPT) {
+  params {
+    param (movie) {
+      type (Movie)
+      min (Optional) max (Many)
+    }
+    param (action) {
+      type (FindMovie)
+      min (Optional) max (One)
+    }
+  }
+  content {
+    if (size(movie) == 1) {
+      //template ("[#{lower(macro('MOVIE_GENRE_VALUE', action.genre))}] movie[ released #{macro('RELEASE_DATE_TIME_EXPRESSION_VALUE', action.releaseDateTimeExpression)}][ with #{value(action.person.name)}]")
+      template ("[#{macro('RELEASE_DATE_TIME_EXPRESSION_VALUE', action.releaseDateTimeExpression)}에 개봉한] [#{value(action.person.name)}이(가) 출연한] [#{macro('MOVIE_GENRE_VALUE', action.genre)}] 영화")
+    } else {
+      //template ("[#{lower(macro('MOVIE_GENRE_VALUE', action.genre))}] movies[ released #{macro('RELEASE_DATE_TIME_EXPRESSION_VALUE', action.releaseDateTimeExpression)}][ with #{value(action.person.name)}]")
+      template ("[#{macro('RELEASE_DATE_TIME_EXPRESSION_VALUE', action.releaseDateTimeExpression)}에 개봉한] [#{value(action.person.name)}이(가) 출연한] [#{macro('MOVIE_GENRE_VALUE', action.genre)}] 영화")
+    }
+  }
+}
+
+template-macro-def (MOVIE_GENRE_HIGHLIGHT_LABEL_RANDOM) {
+  content {
+    template ("Rolling the dice")
+  }
+}
+
+template-macro-def (MOVIE_GENRE_HIGHLIGHT_LABEL_TODAY) {
+  content {
+    template ("오늘의 하이라이트")
+  }
+}
+
+template-macro-def (MOVIE_GENRE_SELECTION_PROMPT) {
+  content {
+    //template ("Which genre are you in the mood for?")
+    choose (Random) {
+      template ("장르를 선택해주세요.")
+      template ("어떤 장르를 보고 싶으세요?")
+      template ("무슨 장르를 보여 드릴까요?")
+    }
+  }
+}
+
+template-macro-def (MOVIE_GENRE_VALUE) {
+  params {
+    param (genre) {
+      type (MovieGenre)
+      min (Required) max (One)
+    }
+  }
+  content {
+    switch (genre) {
+      case (Horror) { template("공포") }
+      case (Thriller) { template("스릴러") }
+      case (Mystery) { template("미스터리") }
+      case (Crime) { template("범죄") }
+      case (Adventure) { template("모험") }
+      case (Action) { template("액션") }
+      case (Fantasy) { template("판타지") }
+      case (ScienceFiction) { template("SF") }
+      case (Family) { template("가족") }
+      case (Animation) { template("애니메이션") }
+      case (Comedy) { template("코미디") }
+      case (Romance) { template("로맨스") }
+      case (Western) { template("서부극") }
+      case (Drama) { template("드라마") }
+      case (History) { template("역사") }
+      case (War) { template("전쟁") }
+      case (Documentary) { template("다큐멘터리") }
+      case (Music) { template("음악") }    
+    }
+  }
+}
+
+template-macro-def (MOVIE_HIGHLIGHT_LABEL) {
+  content {
+    //template ("Top recommendation")
+    template ("추천 작품")
+  }
+}
+
+template-macro-def (MOVIE_NO_RESULT) {
+  params {
+    param (movie) {
+      type (Movie)
+      min (Optional) max (Many)
+    }
+    param (action) {
+      type (FindMovie)
+      min (Optional) max (One)
+    }
+  }
+  content {
+    template ("#{macro('MOVIE_FROM_FINDMOVIE_CONCEPT', movie, action)}에 해당하는 영화가 없습니다. 테스트 문구, 제거 필요!!")
+  }
+}
+
+template-macro-def (MOVIE_RESULT) {
+  params {
+    param (movie) {
+      type (Movie)
+      min (Optional) max (Many)
+    }
+    param (action) {
+      type (FindMovie)
+      min (Optional) max (One)
+    }
+    param (fromQuiz) {
+      type (core.Boolean)
+      min (Optional) max (One)
+      default (false)
+    }
+  }
+  content {
+    if (size(movie) == 1) {
+      if ($handsFree) {
+        //template ("[#{value(movie.movieDetails.overview)}] I hope you enjoy #{macro('MOVIE_VALUE', movie)}!")
+        template ("#{macro('MOVIE_FROM_FINDMOVIE_CONCEPT', movie, action)}입니다.") {
+          speech ("[#{value(movie.movieDetails.overview)}] #{macro('MOVIE_VALUE', movie)} 즐겁게 감상하세요!")
+        }
+      } else {
+        //template ("Here's a #{macro('MOVIE_FROM_FINDMOVIE_CONCEPT', movie, action)}.")
+        template ("#{macro('MOVIE_FROM_FINDMOVIE_CONCEPT', movie, action)}입니다.")
+      }
+    } else {
+      if (fromQuiz) {
+        //template ("Based on your answers, I found some [#{lower(macro('MOVIE_GENRE_VALUE', action.genre))}] movies perfect for you.")
+        template ("설문 결과로 [#{macro('MOVIE_GENRE_VALUE', action.genre)}] 영화를 추천합니다.")
+      } else {
+        //template ("Here are a few #{macro('MOVIE_FROM_FINDMOVIE_CONCEPT', movie, action)}.")
+        template ("#{macro('MOVIE_FROM_FINDMOVIE_CONCEPT', movie, action)}입니다.")
+      }
+    }
+  }
+}
+
+template-macro-def (PERSON_SELECTION_PROMPT) {
+  content {
+    //template ("Which person?")
+    template ("찾는 사람을 선택하세요")
+  }
+}
+
+template-macro-def (PLAY_GENRE_QUIZ_CONVO_DRIVER) {
+  content {
+    template ("Help me choose")
+  }
+}
+
+template-macro-def (QUIZ_UPDATE_PROMPT) {
+  params {
+    param (quiz) {
+      type (Quiz)
+      min (Required) max (One)
+    }
+  }
+  content {
+    template ("[#{macro('QUIZ_FIRST_QUESTION', quiz)} ][#{macro('QUIZ_PREVIOUS_QUESTION_SELECTED_OPTION_COMMENTARY', quiz)} ][#{macro('QUIZ_CURRENT_QUESTION', quiz)}]")
+  }
+}
+
+template-macro-def (QUIZ_FIRST_QUESTION) {
+  params {
+    param (quiz) {
+      type (Quiz)
+      min (Required) max (One)
+    }
+  }
+  content {
+    if (quiz.currentQuestion == 0) {
+      template ("당신에게 맞는 영화 장르를 찾아볼게요. 다음 질문에 대답해 주세요.")
+    }
+  }
+}
+
+template-macro-def (QUIZ_CURRENT_QUESTION) {
+  params {
+    param (quiz) {
+      type (Quiz)
+      min (Required) max (One)
+    }
+  }
+  content {
+    template ("#{value(quiz.questions[quiz.currentQuestion].text)}")
+  }
+}
+
+template-macro-def (QUIZ_PREVIOUS_QUESTION_SELECTED_OPTION_COMMENTARY) {
+  params {
+    param (quiz) {
+      type (Quiz)
+      min (Required) max (One)
+    }
+  }
+  content {
+    if (quiz.currentQuestion > 0) {
+      template ("[#{quiz.questions[quiz.currentQuestion-1].options[quiz.questions[quiz.currentQuestion-1].selectedOption].commentary}]")
+    }
+  }
+}
+
+template-macro-def (RELEASE_DATE_TIME_EXPRESSION_VALUE) {
+  params {
+    param (releaseDateTimeExpression) {
+      type (time.DateTimeExpression)
+      min (Required) max (One)
+    }
+  }
+  content {
+    if (exists(releaseDateTimeExpression.dateInterval) || exists(releaseDateTimeExpression.dateTimeInterval)) {
+      // Interval query
+      template ("#{input(releaseDateTimeExpression)}")
+    } else-if (exists(releaseDateTimeExpression.dateTime)) {
+      // Punctual query for the release year
+      template ("#{value(releaseDateTimeExpression.dateTime.date.year)}")
+    } else-if (exists(releaseDateTimeExpression.date)) {
+      // Punctual query for the release year
+      template ("#{value(releaseDateTimeExpression.date.year)}")
+    }
+  }
+}
+
+template-macro-def (HANDS_FREE_MOVIE_ITEM_SELECTION_QUESTION) {
+  content {
+    //template ("Would you like to hear a summary for this movie?")
+    template ("이 영화에 대한 정보를 읽어줄까요?")
+  }
+}
+
+template-macro-def (HANDS_FREE_MOVIE_OVERFLOW_STATEMENT) {
+  content {
+    //template ("These are all the movies I have.")
+    template ("제가 찾은 영화입니다.")
+  }
+}
+
+template-macro-def (HANDS_FREE_MOVIE_OVERFLOW_QUESTION) {
+  content {
+    //template ("Which movie would you like?")
+    template ("어떤 영화를 좋아하세요?")
+  }
+}
+
+template-macro-def (HANDS_FREE_MOVIE_UNDERFLOW_STATEMENT) {
+  content {
+    //template ("This is the first movie.")
+    template ("첫번째 영화입니다.")
+  }
+}
+
+template-macro-def (HANDS_FREE_MOVIE_HIGHLIGHT_SUMMARY) {
+  params {
+    param (movie) {
+      type (Movie)
+      min (Required) max (One)
+    }
+  }
+  content {
+    //template ("My top recommendation is #{macro('MOVIE_VALUE', movie)}.") {
+      template ("저의 추천작은 #{macro('MOVIE_VALUE', movie)}입니다.") {
+    }
+  }
+}
+
+template-macro-def (HANDS_FREE_MOVIE_NORMAL_SUMMARY) {
+  params {
+    param (movie) {
+      type (Movie)
+      min (Required) max (One)
+    }
+  }
+  content {
+    //template ("Another recommendation is #{macro('MOVIE_VALUE', movie)}.") {
+      template ("다음 추천작은 #{macro('MOVIE_VALUE', movie)}입니다.") {
+    }
+  }
+}
+
+template-macro-def (HANDS_FREE_OPTION_UNDERFLOW_STATEMENT) {
+  content {
+    //template ("This is the first set of options.")
+    template ("첫번째 옵션 리스트입니다.")
+  }
+}
+
+template-macro-def (HANDS_FREE_OPTION_ITEM_SELECTION_MORE_PAGES) {
+  content {
+    //template ("Or, say \"More\" to hear more options.")
+    template ("또는, 더 많은 옵션들을 들으려면 \"더 읽어줘\" 라고 말해주세요.")
+  }
+}
+
+template-macro-def (HANDS_FREE_OPTION_ITEM_SELECTION_LAST_PAGES) {
+  content {
+    //template ("That's all the options I have. Which will you choose?")
+    template ("마지막 옵션 리스트에요. 어떤 옵션을 선택하시겠습니까?")
+  }
+}
+
+
+template-macro-def (HANDS_FREE_OPTION_OVERFLOW_QUESTION) {
+  content {
+    template ("어떤 옵션을 선택하시겠어요?")
+  }
+}
+
+template-macro-def (HANDS_FREE_OPTION_OVERFLOW_STATEMENT) {
+  content {
+    //template ("There aren't any more options you can choose from.")
+    template ("마지막 페이지입니다.")
+  }
+}
+
+template-macro-def (HANDS_FREE_OPTION_LAST_OPTION) {
+  params {
+    param (page) {
+      type (Option)
+      min (Required) max (Many)
+    }
+  }
+  content {
+    if (size(page) == 1) {
+      //template ("The last option is:")
+      template ("마지막 옵션은 :")
+      } else {
+      //template ("The last options are:")
+      template ("마지막 옵션 리스트 :")
+    }
+  }
+}
+
+template-macro-def (HANDS_FREE_PERSON_LIST_SUMMARY) {
+  params {
+    param (name) {
+      type (PersonName)
+      min (Required) max (Many)
+    }
+  }
+  content {
+    //template ("I found a few people matching #{macro('PERSON_NAME_VALUE', name)}.")
+    template ("#{macro('PERSON_NAME_VALUE', name)}의 동명이인을 발견했습니다.")
+  }
+}
+
+template-macro-def (HANDS_FREE_PERSON_ITEM_SELECTION_QUESTION) {
+  content {
+    template ("검색하려는 사람이 맞나요?")
+  }
+}
+
+template-macro-def (HANDS_FREE_PERSON_OVERFLOW_STATEMENT) {
+  content {
+    //template ("I don't have any more results.")
+    template ("더 이상의 검색 결과가 없어요")
+  }
+}
+
+template-macro-def (HANDS_FREE_PERSON_OVERFLOW_QUESTION) {
+  content {
+    //template ("Who are you looking for?")
+    template ("검색하려는 사람이 누구인가요")
+  }
+}
+
+
+template-macro-def (HANDS_FREE_PERSON_UNDERFLOW_STATEMENT) {
+  content {
+    //template ("That's the first person I have.")
+    template ("첫번째 검색 결과입니다.")
+  }
+}
+
+template-macro-def (MOVIE_GENRE_HIGHLIGHT_SPOKEN_SUMMARY) {
+  params {
+    param (movieGenre) {
+      type (MovieGenre)
+      min (Required) max (One)
+    }
+  }
+  content {
+    //template ("Today's highlighted genre is #{value(movieGenre)}.")
+    template ("오늘의 하일라이트 장르는 #{value(movieGenre)}입니다.")
+  }
+}
+
+template-macro-def (MOVIE_VALUE) {
+  params {
+    param (movie) {
+      type (Movie)
+      min (Required) max (One)
+    }
+  }
+  content {
+    template ("\"#{value(movie.title)}\"") {
+      speech ("#{value(movie.title)}")
+    }
+  }
+}
+
+template-macro-def (PERSON_NAME_VALUE) {
+  params {
+    param (name) {
+      type (PersonName)
+      min (Required) max (One)
+    }
+  }
+  content {
+    template ("\"#{value(name)}\"") {
+      speech ("#{value(name)}")
+    }
+  }
+}

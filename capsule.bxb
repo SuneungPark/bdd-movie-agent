@@ -1,0 +1,28 @@
+capsule {
+  id (suneung.movieAgent)
+  version (1.0.0)
+  format (3)
+  targets {
+    target (bixby-mobile-ko-KR)
+  }
+  capsule-imports {
+    import (viv.core) {
+      as (core)
+    }
+    import (viv.time) {
+      as (time)
+      version (3.0.52)
+    }
+  }
+  store-sections {
+    section (MoviesAndTV)
+  }
+  runtime-flags {
+    concepts-inherit-super-type-features
+    modern-prompt-rejection
+    modern-default-view-behavior
+    support-halt-effect-in-computed-inputs
+    no-filtering-with-validation
+    use-input-views-for-selection-list-detail
+  }
+}

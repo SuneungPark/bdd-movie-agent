@@ -1,0 +1,10 @@
+train (t-thipceju8vwzs98ekkz6u5wop) {
+  utterance ("[g:Movie] (내일부터 모레까지)[v:time.DateInterval] 개봉한 영화 중에서 추천해줘")
+  plan (Y2BjkEitSMwtyEnVy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkpcsyy/RKMnNT9VwSS1JDgAzXioKi1OLizPw8BhW4pHN+XnFJUWlyCRZVusSoqksFMkMqC1IZRFFs9MwrSS0qS8xhYGVgZGBiYGZgAbIY4GxGMBsCmIAYKAcA)
+  last-modified (1572488878710)
+}
+train (t-tsw57nxtz451zbf8lxhmowbry) {
+  utterance ("[g:Movie] (다큐멘터리)[v:MovieGenre:Documentary] 찾아줘")
+  plan (Y2BmkEitSMwtyEnVy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkZXHpc0/NK0plYGJgBGIGIMnIAAJMEAwA)
+  last-modified (1571727029462)
+}

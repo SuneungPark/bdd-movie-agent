@@ -1,0 +1,5 @@
+train (t-p045xkc9jlwrlamo7w41wx182) {
+  utterance ("[g:Movie] (엠마 왓슨)[v:PersonName]이 주연으로 나온 영화가 뭐야")
+  plan (Y2BlkEitSMwtyEnVy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkJbHIBqQWFefnMcji0IhHGiLll5ibysDCwMjAxMAMpBmgLEYwCwSYgBgoDgA=)
+  last-modified (1571740289080)
+}

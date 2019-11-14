@@ -1,0 +1,5 @@
+train (t-fza7rj5gbjzjr4wkr7r055ufs) {
+  utterance ("[g:Movie] (2017년 가을)[v:time.DateTimeExpression]에 개봉한 (액션)[v:MovieGenre:Action] 영화들 알려줘")
+  plan (Y2BhEC/LLNNLzAxJLS5xTiwoLs1J1fPNL8tMZZDGlHDLzEuBSMrg0OWemlcE1VqSmZuq55JYkhoCZLhWFBSlFhdn5ucxMDMwMjABSQYgDYIQAOKDRQE=)
+  last-modified (1572509855075)
+}

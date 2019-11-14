@@ -1,0 +1,20 @@
+vocab (MovieGenre) {
+  Horror { "공포" }
+  Thriller { "스릴러" }
+  Mystery { "미스터리" }
+  Crime { "범죄" }
+  Adventure { "모험" }
+  Action { "액션" }
+  Fantasy { "판타지" }
+  ScienceFiction { "SF" "에스에프" "공상 과학"}
+  Family { "가족" }
+  Animation { "애니메이션" "애니" }
+  Comedy { "코미디"}
+  Romance { "로맨스" "멜로"}
+  Western { "서부극" }
+  Drama { "드라마" }
+  History { "사극" "역사" }
+  War { "전쟁" }
+  Documentary { "다큐멘터리" "다큐" }
+  Music { "음악" "뮤지컬"}
+}

@@ -1,0 +1,5 @@
+train (t-4yi5sexr1nz0gx70qzttb0wpc) {
+  utterance ("[g:Movie] (김태리)[v:PersonName]가 출연한 영화 보여줘")
+  plan (Y2BlkCguzUstzUvXy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkJbHIBqQWFefnMcji0IhHGiLll5ibysDCwMjAxMAMpBmgLEYwCwSYgBgoDgA=)
+  last-modified (1573621553216)
+}

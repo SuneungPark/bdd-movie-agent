@@ -1,0 +1,10 @@
+train (t-y9xevd3z1o0764381m6n6sdw9) {
+  utterance ("[g:Movie] (성룡)[v:PersonName] 나오는 영화 찾아줘")
+  plan (Y2BlkEitSMwtyEnVy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkJbHIBqQWFefnMcji0IhHGiLll5ibysDCwMjAxMAMpBmgLEYwCwSYgBgoDgA=)
+  last-modified (1571738344278)
+}
+train (t-yfzoe05dd732yncvrg0cglzbm) {
+  utterance ("[g:Movie] (제임스 카메론)[v:PersonName] 감독 영화 검색해줘")
+  plan (Y2BlkEitSMwtyEnVy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkJbHIBqQWFefnMcji0IhHGiLll5ibysDCwMjAxMAMpBmgLEYwCwSYgBgoDgA=)
+  last-modified (1571738278149)
+}

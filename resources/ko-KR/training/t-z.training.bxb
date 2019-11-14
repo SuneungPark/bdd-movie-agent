@@ -1,0 +1,15 @@
+train (t-z3yecaz8m7a759r0l9gb8a4cu) {
+  utterance ("[g:Movie] (2019)[v:time.DateTimeExpression]년에 개봉한 무비 알려줘")
+  plan (Y2BmkEitSMwtyEnVy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkpcsyy/RKMnNT9VwSS1JDgAzXioKi1OLizPw8BiYGRiBmAJKMDCDABMEA)
+  last-modified (1571739778056)
+}
+train (t-zgqmp3ncwumbff8qlwtlz67qa) {
+  utterance ("[g:Answer:prompt] (세 단어 답)[v:Answer]")
+  plan (Y2BikCjLLNNLzAxJLS5xTiwoLs1J1XPMKy5PLcIjwwiEDAw8QMwExEA2AA==)
+  last-modified (1572591394181)
+}
+train (t-ziilgvew3mz1r50hvh8rbwu3d) {
+  utterance ("[g:Answer:prompt] (5 토큰으로 된 답)[v:Answer]")
+  plan (Y2BikCjLLNNLzAxJLS5xTiwoLs1J1XPMKy5PLcIjwwiEDAw8QMwExEA2AA==)
+  last-modified (1572591741750)
+}

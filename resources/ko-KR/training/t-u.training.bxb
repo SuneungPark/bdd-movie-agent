@@ -1,0 +1,5 @@
+train (t-u9h509752b2cqwms6z16orwuh) {
+  utterance ("[g:Movie] (작년부터 올해까지)[v:time.DateTimeExpression] 개봉한 영화 찾아줘")
+  plan (Y2BmEC/LLNNLzAxJLS5xTiwoLs1J1fPNL8tMZZDGlHDLzEtBkizJzE3Vc0ksSQ0BMlwrCopSi4sz8/MYmBgYgZgBSDIygAATBAMA)
+  last-modified (1572506410473)
+}

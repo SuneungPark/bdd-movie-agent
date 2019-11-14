@@ -1,0 +1,5 @@
+train (t-8xlzo8wup7e9ri752pq017isn) {
+  utterance ([g:Movie] 추천 영화 보여줘)
+  plan (Y2BkkCguzUstzUvXy80vy0x1TE/NK9HzBTEZQIARRAAA)
+  last-modified (1573634170889)
+}

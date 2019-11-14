@@ -1,0 +1,5 @@
+train (t-2caf6fl4wi8k2c3eb8hsnpyvb) {
+  utterance ("[g:Movie] (작년)[v:time.DateTimeExpression]에 (안젤리나 졸리)[v:PersonName]가 출연한 영화 찾아줘")
+  plan (Y2BjkCguzUstzUvXy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkJbHIBqQWFefnMcji0IhHGiLll5ibyiBdllmmV5KZm6rnkliSGgJkuFYUFKUWF2cC9bIyMDIwMTAzsABZDFA2IxAygDEIMAMxWBYA)
+  last-modified (1572978156192)
+}

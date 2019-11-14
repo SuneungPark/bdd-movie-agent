@@ -1,0 +1,11 @@
+train (t-6g8vm6bv4m5kzjmk8omddfst6) {
+  utterance ([g:Movie] 영화 추천해줘)
+  plan (Y2BkkEitSMwtyEnVy80vy0x1TE/NK9HzBTEZQIARRAAA)
+  last-modified (1571738171345)
+}
+train (t-6z78agjbved4nn50oduou01k5) {
+  utterance ("[g:Movie] (작년)[v:time.DateTimeExpression]에 (이병현)[v:PersonName]이 나온 영화는?")
+  plan (Y2BjkCguzUstzUvXy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkJbHIBqQWFefnMcji0IhHGiLll5ibyiBdllmmV5KZm6rnkliSGgJkuFYUFKUWF2cC9bIyMDIwMTAzsABZDFA2IxAygDEIMAMxWBYA)
+  enabled (false)
+  last-modified (1573717171641)
+}

@@ -1,0 +1,21 @@
+train (t-bd7uufdwo4q2gglmueaueitge) {
+  utterance ("[g:Answer:prompt] (바나나 우유를 줘)[v:Answer]")
+  plan (Y2BikCjLLNNLzAxJLS5xTiwoLs1J1XPMKy5PLcIjwwiEDAw8QMwExEA2AA==)
+  last-modified (1572591825638)
+}
+train (t-bhusi919zj59dvgffjnvifacr) {
+  utterance ("[g:Movie] (송강호)[v:PersonName]가 (2019년도)[v:time.DateTimeExpression]에 무슨 영화를 찍었어")
+  plan (Y2BjkCguzUstzUvXy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkJbHIBqQWFefnMcji0IhHGiLll5ibyiBdllmmV5KZm6rnkliSGgJkuFYUFKUWF2cC9bIyMDIwMTAzsABZDFA2IxAygDEIMAMxWBYA)
+  enabled (false)
+  last-modified (1573633045832)
+}
+train (t-bic9mskj67mcx0jnynnndp7ss) {
+  utterance ("[g:Movie] (2010년)[v:time.DateTimeExpression]에 개봉한 영화 보여줘")
+  plan (Y2BmkCguzUstzUvXy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkpcsyy/RKMnNT9VwSS1JDgAzXioKi1OLizPw8BiYGRiBmAJKMDCDABMEA)
+  last-modified (1572993516005)
+}
+train (t-brhjdb4pwkdh8xyujf9tw63v0) {
+  utterance ("[g:Movie] (1995년 1월 이전)[v:time.DateTimeExpression]에 개봉한 (SF)[v:MovieGenre:ScienceFiction] 영화 검색해줘")
+  plan (Y2BhkEitSMwtyEnVy80vy0x1TE/NK9HzBTEZZLDIuGXmpUBkZXHpc0/NK0plkC7LLNMrycxN1XNJLEkNATJcKwqKUouLM/PzGJgZGBmYgCQDkAZBCADxwaIA)
+  last-modified (1571738432112)
+}
