@@ -383,7 +383,7 @@ template-macro-def (MOVIE_GENRE_HIGHLIGHT_SPOKEN_SUMMARY) {
   }
   content {
     //template ("Today's highlighted genre is #{value(movieGenre)}.")
-    template ("오늘의 하일라이트 장르는 #{value(movieGenre)}입니다.")
+    template ("오늘의 하이라이트 장르는 #{value(movieGenre)}입니다.")
   }
 }
 
