@@ -25,7 +25,7 @@ This Capsule is like a travel agent to help you find your next movie adventure.
 | 퀴즈 시작하기:<br/> 취향에 대한 질문들로 추천 장르를 유추하기 위한 퀴즈 시작 - 선택된 장르는 영화를 추천하기 위해 사용된다. | "영화 퀴즈 실행"<br/> 장르 prompt에서 "선택 도와줘"라고 말 할 수 있다. |
 | 장르로 영화 추천하기| "판타지 영화 추천해줘" |
 | 배우나 감독으로 영화 찾기:<br/> 동명이인이 있을 경우, 선택 prompt가 뜬다. | "엠마 왓슨이 주연한 영화 보여줘"<br/>"제임스 카메론 감독의 영화 찾아줘' |
-| 여러 조건으로 영화 찾기| "자비에 돌란이 작년에 작업한 영화가 뭐야?"<br/> "작년 여름에 개봉한 다큐멘터리 알려줘" |
+| 여러 조건으로 영화 찾기| ""작년 여름에 개봉한 다큐멘터리 알려줘"<br> "2019년도에 송강호 출연한 영호 추천해줘" |
 
 ## Code Puzzles
 For hands-on exercises that build upon this Capsule, head over to the [Code
