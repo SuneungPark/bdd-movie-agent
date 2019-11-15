@@ -113,7 +113,7 @@ function searchPerson(name) {
     const url = "https://api.themoviedb.org/3/search/person"
     const query = {
       "api_key": properties.get("secret", "apiKey"),
-      "language" : "ko"
+      "language" : "ko-KR"
     }
     if (name) {
       query["query"] = name

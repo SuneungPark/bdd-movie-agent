@@ -27,7 +27,7 @@ layout-macro-def (MOVIE_DETAILS) {
 								halign (Center)
 								content {
 									text {
-										value ("Released")
+										value ("개봉일")
 										style (Detail_L_Soft)
 									}
 									text {
@@ -41,7 +41,7 @@ layout-macro-def (MOVIE_DETAILS) {
 								halign (Center)
 								content {
 									text {
-										value ("Runtime")
+										value ("상영시간")
 										style (Detail_L_Soft)
 									}
 									if (exists(movie.movieDetails.runtime)) {
@@ -63,7 +63,7 @@ layout-macro-def (MOVIE_DETAILS) {
 								content {
 									if (exists(movie.movieDetails.budget) && movie.movieDetails.budget > 0) {
 										text {
-											value ("Budget")
+											value ("예산")
 											style (Detail_L_Soft)
 										}
 										text {
@@ -79,7 +79,7 @@ layout-macro-def (MOVIE_DETAILS) {
 								content {
 									if (exists(movie.movieDetails.revenue) && movie.movieDetails.revenue > 0) {
 										text {
-											value ("Revenue")
+											value ("수익")
 											style (Detail_L_Soft)
 										}
 										text {

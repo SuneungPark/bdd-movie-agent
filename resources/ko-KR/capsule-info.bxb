@@ -1,11 +1,16 @@
 capsule-info {
-  description (Watching movies is a way to travel to new worlds. This Capsule is like a travel agent to help you find your next movie adventure.)
+  description (Travel agent가 고객의 요구 사항에 맞는 여행지를 추천하는 것처럼, 영화도 취향에 맞게 골라주는 서비스)
   developer-name (Bixby)
   dispatch-name (무비 에이전트)
+  dispatch-aliases {
+    alias (영화 에이전트)
+    alias (영화 서비스 앱)
+  }
   display-name (Movie Agent)
   icon-asset (tmdbLogo.png)
   search-keywords {
-    keyword (movie)
+    keyword (무비)
+    keyword (영화)
   }
   terms-url (https://www.themoviedb.org/terms-of-use)
   website-url (https://www.themoviedb.org)
