@@ -1,0 +1,14 @@
+dialog (Value) {
+  match: Person(person) {
+    from-output: FindPerson(action) {
+      from-input: PersonName(personName)
+    }
+  }
+  template-macro (PERSON_NAME_VALUE) {
+    param (name) {
+      if (size(personName) == 1) {
+        expression (personName)
+      }
+    }
+  }
+}

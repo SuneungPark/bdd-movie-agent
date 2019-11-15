@@ -18,10 +18,10 @@ template-macro-def (MOVIE_FROM_FINDMOVIE_CONCEPT) {
   content {
     if (size(movie) == 1) {
       //template ("[#{lower(macro('MOVIE_GENRE_VALUE', action.genre))}] movie[ released #{macro('RELEASE_DATE_TIME_EXPRESSION_VALUE', action.releaseDateTimeExpression)}][ with #{value(action.person.name)}]")
-      template ("[#{macro('RELEASE_DATE_TIME_EXPRESSION_VALUE', action.releaseDateTimeExpression)}에 개봉한] [#{value(action.person.name)}이(가) 출연한] [#{macro('MOVIE_GENRE_VALUE', action.genre)}] 영화")
+      template ("[#{macro('RELEASE_DATE_TIME_EXPRESSION_VALUE', action.releaseDateTimeExpression)}에 개봉한] [#{value(action.person)}이(가) 출연한] [#{macro('MOVIE_GENRE_VALUE', action.genre)}] 영화")
     } else {
       //template ("[#{lower(macro('MOVIE_GENRE_VALUE', action.genre))}] movies[ released #{macro('RELEASE_DATE_TIME_EXPRESSION_VALUE', action.releaseDateTimeExpression)}][ with #{value(action.person.name)}]")
-      template ("[#{macro('RELEASE_DATE_TIME_EXPRESSION_VALUE', action.releaseDateTimeExpression)}에 개봉한] [#{value(action.person.name)}이(가) 출연한] [#{macro('MOVIE_GENRE_VALUE', action.genre)}] 영화")
+      template ("[#{macro('RELEASE_DATE_TIME_EXPRESSION_VALUE', action.releaseDateTimeExpression)}에 개봉한] [#{value(action.person)}이(가) 출연한] [#{macro('MOVIE_GENRE_VALUE', action.genre)}] 영화")
     }
   }
 }
@@ -122,20 +122,16 @@ template-macro-def (MOVIE_RESULT) {
   content {
     if (size(movie) == 1) {
       if ($handsFree) {
-        //template ("[#{value(movie.movieDetails.overview)}] I hope you enjoy #{macro('MOVIE_VALUE', movie)}!")
         template ("#{macro('MOVIE_FROM_FINDMOVIE_CONCEPT', movie, action)}입니다.") {
           speech ("[#{value(movie.movieDetails.overview)}] #{macro('MOVIE_VALUE', movie)} 즐겁게 감상하세요!")
         }
       } else {
-        //template ("Here's a #{macro('MOVIE_FROM_FINDMOVIE_CONCEPT', movie, action)}.")
         template ("#{macro('MOVIE_FROM_FINDMOVIE_CONCEPT', movie, action)}입니다.")
       }
     } else {
       if (fromQuiz) {
-        //template ("Based on your answers, I found some [#{lower(macro('MOVIE_GENRE_VALUE', action.genre))}] movies perfect for you.")
         template ("설문 결과로 [#{macro('MOVIE_GENRE_VALUE', action.genre)}] 영화를 추천합니다.")
       } else {
-        //template ("Here are a few #{macro('MOVIE_FROM_FINDMOVIE_CONCEPT', movie, action)}.")
         template ("#{macro('MOVIE_FROM_FINDMOVIE_CONCEPT', movie, action)}입니다.")
       }
     }
@@ -413,8 +409,6 @@ template-macro-def (PERSON_NAME_VALUE) {
     }
   }
   content {
-    template ("\"#{value(name)}\"") {
-      speech ("#{value(name)}")
-    }
+    template ("#{value(name)}")
   }
 }
