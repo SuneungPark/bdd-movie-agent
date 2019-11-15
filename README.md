@@ -21,12 +21,6 @@ This Capsule is like a travel agent to help you find your next movie adventure.
 
 | Use Cases | Example Utterances |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| Recommend a movie: <br> When no other inputs are specified, prompt for a genre <br> - Provide a selection of genres, with the "genre of the day" highlighted at the top <br> - Display a conversation driver "Help me choose" to launch the quiz to infer a genre | "What movie should I watch?" |
-| Play a quiz: <br> - Launch a quiz to infer a genre by asking a series of personality type questions <br> - The genre will be used to recommend a movie. | "Play the movie quiz" <br> "Help me choose" when on the genre prompt |
-| Recommend a movie by genre | "Recommend a fantasy movie" |
-| Browse movies by release window | "Show me movies released last spring" |
-| Find movies involving person (cast or crew member) <br> When multiple people share the same name, disambiguate with a selection prompt | "What movies feature Emma Watson" <br> "Find movies by James Cameron" |
-| Find movies with a combination of inputs | "What movies did Xavier Dolan work on last year?" <br> "What documentaries came out last spring?" |
 | 영화 추천하기:<br/> 다른 조건이 명시되지 않았을 경우, 장르를 물어본다 - "오늘의 장르"라는 제목으로 선택 가능한 장르 리스트를 보여준다. 장르를 유추하기 위한 퀴즈를 시작하기 위해서 '선택 도와주기'라는 conversation driver를 출력. | "어떤 영화를 봐야 할까?" |
 | 퀴즈 시작하기:<br/> 취향에 대한 질문들로 추천 장르를 유추하기 위한 퀴즈 시작 - 선택된 장르는 영화를 추천하기 위해 사용된다. | "영화 퀴즈 실행"<br/> 장르 prompt에서 "선택 도와줘"라고 말 할 수 있다. |
 | 장르로 영화 추천하기| "판타지 영화 추천해줘" |
