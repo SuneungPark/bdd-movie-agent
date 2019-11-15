@@ -1,0 +1,9 @@
+dialog (Value) {
+  match: MovieGenre(movieGenre)
+
+  template-macro (MOVIE_GENRE_VALUE) {
+    param (genre) {
+      expression (movieGenre)
+    }
+  }
+}
